@@ -4,3 +4,13 @@ def Fact3(n):
     else:
         return n * Fact(n - 1)
 
+
+
+from math import ceil
+def prost3(n):
+    i = 2
+    while i <= ceil(n ** (1 / 2)):
+        if n % i == 0:
+            return "не просте"
+        i = i + 1
+    return "просте"
