@@ -14,3 +14,11 @@ def prost3(n):
             return "не просте"
         i = i + 1
     return "просте"
+
+def FiveDegree3(x):
+    if x == 1:
+        return "Число є степенем п'ятірки"
+    if x != int(x):
+        return "Число не є степенем п'ятірки"
+    else:
+        return FiveDegree3(x / 5)
