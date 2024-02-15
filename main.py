@@ -1,3 +1,4 @@
-from utils import Fact3
+from utils import Fact3, prost3
 a = int(input())
-print(Fact3(a))
+b = int(input())
+print(Fact3(a), prost3(a))
