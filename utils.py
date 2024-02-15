@@ -28,3 +28,30 @@ def C3(n,k):
     return Fact(n)/(Fact(k) * Fact(n - k))
 for i in range(n + 1):
     lst.append(int(C3(n, i)))
+
+
+def Rozklad3(v):
+    Divider = 2
+    Degree = 0
+    d = {}
+    w = v
+    while v > 1:
+        if v % Divider == 0:
+            Degree += 1
+            v = v / Divider
+            if v == 1 and Degree != 0:
+                d[Divider] = Degree
+                k = Divider
+            continue
+        else:
+            if Degree != 0:
+                d[Divider] = Degree
+            Divider += 1
+            Degree = 0
+    p = ""
+    for i in d.keys():
+        if i == k:
+            p = p + '(' + str(i) + ' ^ ' + str(d[i]) + ')'
+        else:
+            p = p + '(' + str(i) + ' ^ ' + str(d[i]) + ')' + '  *  '
+    return str(w)+ ' = '+ p
