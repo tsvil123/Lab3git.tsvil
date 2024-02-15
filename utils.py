@@ -22,3 +22,9 @@ def FiveDegree3(x):
         return "Число не є степенем п'ятірки"
     else:
         return FiveDegree3(x / 5)
+
+
+def C3(n,k):
+    return Fact(n)/(Fact(k) * Fact(n - k))
+for i in range(n + 1):
+    lst.append(int(C3(n, i)))
